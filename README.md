@@ -1,6 +1,6 @@
 # r/place cropped timelapse creator
 
-Creates timelapses of small areas on the r/place 2022 canvas, [like this (generated at 10x speed)](https://raw.githubusercontent.com/Carsmaniac/rplace-cropped-timelapse-creator/main/web-serials-timelapse.mp4)
+Creates timelapses of small areas on the r/place 2022 canvas
 
 ## Usage
 0. Install python
