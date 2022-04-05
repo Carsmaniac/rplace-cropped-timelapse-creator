@@ -1,5 +1,5 @@
 # go to https://rplace.space/combined/
-# and look for the id your start and end image
+# and look for the id of your start and end image
 timelapse:
   image-range:
     start: 1648822992

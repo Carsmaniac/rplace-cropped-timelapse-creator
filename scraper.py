@@ -38,7 +38,7 @@ def get_image(id):
     try:
       img = Image.open(img_path)
     except:
-      img_url = f'url/{id}.png'
+      img_url = f'{url}/{id}.png'
       res = requests.get(img_url, stream = True)
       if res.status_code == 200:
          img = Image.open(io.BytesIO(res.content))

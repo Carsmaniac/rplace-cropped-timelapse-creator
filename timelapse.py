@@ -1,4 +1,4 @@
-from re import S
+import os
 import yaml
 import cv2
 import numpy as np
@@ -23,6 +23,7 @@ n = config['output']['name']
 w = config['output']['dimensions']['width']
 h = config['output']['dimensions']['height']
 
+os.mkdir('image_cache')
 ids = scraper.get_image_ids(s, e, g)
 fourcc = cv2.VideoWriter_fourcc(*'mp4v')
 vid = cv2.VideoWriter(f'{n}.mp4', fourcc, 30.0, (w, h))
