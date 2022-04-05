@@ -12,7 +12,7 @@ with open('config.yaml', 'r') as f:
    
 s = config['timelapse']['image-range']['start']
 e = config['timelapse']['image-range']['end']
-g = config['timelapse']['frame_granularity']
+g = config['timelapse']['frame-granularity']
 
 x = config['place-canvas']['top-left-coordinates']['x']
 y = config['place-canvas']['top-left-coordinates']['y']
