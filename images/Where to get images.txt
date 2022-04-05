@@ -1,0 +1,3 @@
+Download the zip of snapshots from https://rplace.space/combined.zip and place all the PNGs in this folder
+
+Total size is around 15 GB
