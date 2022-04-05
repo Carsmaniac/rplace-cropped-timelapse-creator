@@ -1,6 +1,6 @@
 # r/Place Cropped Timelapse Creator
 
-Creates timelapses of small areas on the r/Place 2022 canvas, like this
+Creates timelapses of small areas on the r/Place 2022 canvas, [like this (generated at 10x speed)](web-serials-timelapse.mp4)
 
 ## Prerequisites
 
