@@ -17,14 +17,14 @@ for i in range(2):
     bottom_right[i] = int(bottom_right[i]) + 1
 
 print("\nSpeed determines how many frames are put in the video, e.g. a speed of 3 means every 3rd frame is included")
-print("rplace.space took screenshots every 30 minutes, so I'd recommend a speed of 3 or 4")
+print("rplace.space took screenshots every 30 minutes, so I recommend a speed of 3 or 4")
 speed = int(input("Speed (whole number, no decimals): "))
 
 scale = 2
 
-if top_left[0] < 1000 && top_left[1] < 1000:
+if top_left[0] < 1000 and top_left[1] < 1000:
     start_index = 0 # 1k x 1k canvas
-elif top_left[0] >= 1000 && top_left[1] < 1000:
+elif top_left[0] >= 1000 and top_left[1] < 1000:
     start_index = 3022 # 2k x 1k canvas
 else:
     start_index = 7193 # 2k x 2k canvas
@@ -36,24 +36,20 @@ if os.path.exists("cropped_{}".format(suffix)):
     shutil.rmtree("cropped_{}".format(suffix))
 os.mkdir("cropped_{}".format(suffix))
 
-total = len(os.listdir())
+total = len(os.listdir("images/"))
 counter = 1
 
-for image_file in os.listdir()[start_index:]:
+for image_file in os.listdir("images/")[start_index:]:
     if counter % speed == 0:
         if image_file[-3:] == "png":
-            with Image.open(image_file) as img:
+            with Image.open("images/" + image_file) as img:
                 img = img.crop((top_left[0], top_left[1], bottom_right[0], bottom_right[1]))
                 img = img.resize((img.size[0] * scale, img.size[1] * scale), Image.NEAREST)
                 img.save("cropped_{}/{}".format(suffix, image_file), "PNG")
-        print("{}/{} ({})".format(counter, total - start_index, suffix))
+        print("Cropped {}/{} ({})".format(counter, total - start_index, suffix))
     counter += 1
 
-print("Making video file")
-
-if os.path.exists("output_{}".format(suffix)):
-    shutil.rmtree("output_{}".format(suffix))
-os.mkdir("output_{}".format(suffix))
+print("\nMaking video file")
 
 frame_array = []
 for image_file in sorted(os.listdir("cropped_{}".format(suffix))):
@@ -63,7 +59,7 @@ for image_file in sorted(os.listdir("cropped_{}".format(suffix))):
         size = (width, height)
         frame_array.append(img)
 
-video_output = cv2.VideoWriter("output_{}/video.avi".format(suffix), cv2.VideoWriter_fourcc(*'DIVX'), 30.0, size)
+video_output = cv2.VideoWriter("video.avi".format(suffix), cv2.VideoWriter_fourcc(*'DIVX'), 30.0, size)
 
 for frame in frame_array:
     video_output.write(frame)
@@ -71,7 +67,7 @@ video_output.release()
 
 print("Converting to mp4")
 
-os.system("ffmpeg -i output_{}/video.avi \"output_{}/Timelapse_{}.mp4\"".format(suffix, suffix, suffix))
+os.system("ffmpeg -i video.avi \"Timelapse {}.mp4\"".format(suffix, suffix, suffix))
 
 shutil.rmtree("cropped_{}".format(suffix))
-os.remove("output_{}/video.avi".format(suffix))
+os.remove("video.avi".format(suffix))
