@@ -2,26 +2,9 @@
 
 Creates timelapses of small areas on the r/Place 2022 canvas, [like this (generated at 10x speed)](https://raw.githubusercontent.com/Carsmaniac/rplace-cropped-timelapse-creator/main/web-serials-timelapse.mp4)
 
-## Prerequisites
-
-- OpenCV - `pip install opencv-python`
-- Pillow - `pip install pillow`
-- [ffmpeg](https://ffmpeg.org/) - Needs to be added to the system path, or `ffmpeg.exe` needs to be in the same folder as the `.py` file
-
 ## Usage
 
-1. Download the collection of r/Place snapshots from [rplace.space](https://rplace.space/combined/), there is a text file with a link to a zip file in the `images` folder
-2. Extract all PNGs to the `images` folder
-3. Run `generate-timelapse.py` and follow the prompts
-
-Your folder structure should look like this:
-```
-images
- ┃ 1648822500.png
- ┃ 1648822512.png
- ┃ 1648822759.png
- ┃ ...
- ┗ Where to get images.txt
-ffmpeg.exe (or in system path)
-generate-timelapse.py
-```
+1. Install the required python packages: `pip install -r requirement.txt`
+2. Edit `config.yaml` to your liking - image ids should be taken from [rplace.space](https://rplace.space/combined/)
+3. Run `timelapse.py`
+4. Watch the generated timelapse `{output.name}.mp4`  
