@@ -5,7 +5,7 @@ timelapse:
     start: 1648822992
     end: 1648836743
   # if 1 - takes every image, if 3 - takes every third image
-  frame_granularity: 3
+  frame_granularity: 1
 
 place-canvas:
   top-left-coordinates:
@@ -16,7 +16,7 @@ place-canvas:
     height: 1000
 
 output:
-  name: "foo_3"
+  name: "foo"
   dimensions:
     width: 2000
     height: 2000
