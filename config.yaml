@@ -2,23 +2,23 @@
 # and look for the id of your start and end image
 timelapse:
   image-range:
-    start: 1648822992
-    end: 1648836743
+    start: 1648948834
+    end: 1649113741
   # if 1 - takes every image, if 3 - takes every third image
   frame_granularity: 1
 
 place-canvas:
   top-left-coordinates:
-    x: 0
-    y: 0
+    x: 1460
+    y: 430
   dimensions:
-    width: 1000
-    height: 1000
+    width: 150
+    height: 150
 
 output:
-  name: "foo"
+  name: "ethz-epfl"
   dimensions:
-    width: 2000
-    height: 2000
+    width: 600
+    height: 600
   
 

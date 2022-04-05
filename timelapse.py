@@ -23,7 +23,8 @@ n = config['output']['name']
 w = config['output']['dimensions']['width']
 h = config['output']['dimensions']['height']
 
-os.mkdir('image_cache')
+os.makedirs('image_cache', exist_ok=True)
+
 ids = scraper.get_image_ids(s, e, g)
 fourcc = cv2.VideoWriter_fourcc(*'mp4v')
 vid = cv2.VideoWriter(f'{n}.mp4', fourcc, 30.0, (w, h))
