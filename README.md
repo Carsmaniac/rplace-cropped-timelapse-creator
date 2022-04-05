@@ -4,7 +4,7 @@ Creates timelapses of small areas on the r/place 2022 canvas, [like this (genera
 
 ## Usage
 
-1. Install the required python packages: `pip install -r requirement.txt`
+1. Install the required python packages: `pip install -r requirements.txt`
 2. Edit `config.yaml` - image ids should be taken from [rplace.space](https://rplace.space/combined/)
 3. Run `timelapse.py`
 4. Watch the generated timelapse `{output.name}.mp4`
