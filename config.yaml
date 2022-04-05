@@ -2,15 +2,15 @@
 # and look for the id of your start and end image
 timelapse:
   image-range:
-    start: 1648948834
+    start: 1648995088
     end: 1649113741
-  # if 1 - takes every image, if 3 - takes every third image
-  frame-granularity: 1
+  frame-granularity: 1  # take every nth image
+  download-threads: 8
 
 place-canvas:
   top-left-coordinates:
     x: 1460
-    y: 430
+    y: 470
   dimensions:
     width: 150
     height: 150

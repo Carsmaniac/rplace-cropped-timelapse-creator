@@ -1,5 +1,5 @@
 opencv-python
 pillow
 numpy
-progress
+tqdm
 pyyaml

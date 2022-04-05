@@ -1,3 +1,6 @@
-__pycache__
+__pycache__/
+
 image_cache/*
+!image_cache/.gitkeep
+
 *.mp4
