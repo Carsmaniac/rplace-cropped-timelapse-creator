@@ -1,4 +1,3 @@
-
-ffmpeg.exe
-images/*.png
-final.tif
+__pycache__
+image_cache/*
+*.mp4

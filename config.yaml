@@ -1,0 +1,24 @@
+# go to https://rplace.space/combined/
+# and look for the id your start and end image
+timelapse:
+  image-range:
+    start: 1648822992
+    end: 1648836743
+  # if 1 - takes every image, if 3 - takes every third image
+  frame_granularity: 3
+
+place-canvas:
+  top-left-coordinates:
+    x: 0
+    y: 0
+  dimensions:
+    width: 1000
+    height: 1000
+
+output:
+  name: "foo_3"
+  dimensions:
+    width: 2000
+    height: 2000
+  
+
