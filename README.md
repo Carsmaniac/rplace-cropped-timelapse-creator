@@ -1,6 +1,6 @@
 # r/place cropped timelapse creator
 
-Creates a timelapse of small areas on the r/place 2022 canvas given any timeframe
+Creates a timelapse of small (or large!) areas on the r/place 2022 canvas given any timeframe
 ## Usage
 0. Install python
 1. Install the required python packages: `pip install -r requirements.txt`
