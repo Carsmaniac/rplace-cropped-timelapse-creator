@@ -1,4 +1,6 @@
+__pycache__/
 
-ffmpeg.exe
-images/*.png
-final.tif
+image_cache/*
+!image_cache/.gitkeep
+
+*.mp4

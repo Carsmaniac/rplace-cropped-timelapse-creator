@@ -1,0 +1,24 @@
+# go to https://rplace.space/combined/
+# and look for the id of your start and end image
+timelapse:
+  image-range:
+    start: 1648995088
+    end: 1649113741
+  frame-granularity: 1  # take every nth image
+  download-threads: 8
+
+place-canvas:
+  top-left-coordinates:
+    x: 1460
+    y: 470
+  dimensions:
+    width: 150
+    height: 150
+
+output:
+  name: "ethz-epfl"
+  dimensions:
+    width: 600
+    height: 600
+  
+
